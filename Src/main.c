@@ -291,43 +291,7 @@ void MOC_Delay_ms(uint32_t nTime)
     }
 }
 
-
-//void LED_SendByte(uint16_t SendByte) //数据从高位到低位//
-//{
-//    uint8_t              i   = 16;
-//	uint16_t	senddata = SendByte;
-//	 MINI_LCDI_DOWN();
-//    while(i--)
-//    {
-//    		MINI_OE_UP();
-//			MINI_C4_UP();
-//			LED_Delay();       
-//        if(senddata&0x8000)
-//        {
-//            MINI_B1_UP();
-//			MINI_AI_UP();
-//			MINI_BI_DOWN();
-//			LED_Delay();
-//        }
-//        else
-//        {
-//            MINI_B1_DOWN();
-//			MINI_AI_DOWN();
-//			MINI_BI_UP();
-//			LED_Delay();
-//        } 
-//			MINI_C4_DOWN();
-//		    LED_Delay();
-//        senddata <<= 1;				
-//			LED_Delay(); 
-//    }
-//    MINI_C4_DOWN();
-//	 MINI_LCDI_UP();
-//	 LED_Delay();
-//	 
-//	//MINI_B1_UP();
-//}
-void LED_SendByte2(uint8_t senddata) //数据从高位到低位//
+void LED_SendByte(uint8_t senddata) //数据从高位到低位//
 {
     uint8_t         i   = 8;
     while (i--)
@@ -365,7 +329,7 @@ void LED_SendByte2(uint8_t senddata) //数据从高位到低位//
 }
 
 
-//void LED_SendByte2(void) //数据从高位到低位//
+//void LED_SendByte(void) //数据从高位到低位//
 //{
 //    MINI_CLK_UP();
 //	__NOP();
@@ -391,60 +355,62 @@ void LED_SendByte2(uint8_t senddata) //数据从高位到低位//
 //}
 void moc_L0_ON(void)
 {
-    MINI_OEI_DOWN();
-    MINI_AI_DOWN();
-    MINI_BI_DOWN();
-    MINI_OEI_UP();
+		uint8_t t_testcycleA = 0;
+
+  	 	MINI_CLK_DOWN();
+		MINI_SDI0_DOWN();
+		MINI_OEI_DOWN();
+		for(t_testcycleA = 0; t_testcycleA <=NOPCNT ;t_testcycleA++){			
+			__NOP();
+		}
+		MINI_LE_UP();
+		for(t_testcycleA = 0; t_testcycleA <=NOPCNT;t_testcycleA++){			
+			__NOP();
+		}
+		MINI_AI_DOWN();
+    	MINI_BI_DOWN();
+		for(t_testcycleA = 0; t_testcycleA <=NOPCNT;t_testcycleA++){			
+			__NOP();
+		}
+		MINI_LE_DOWN();
+    	MINI_OEI_UP();
+		for(t_testcycleA = 0; t_testcycleA <=NOPCNT;t_testcycleA++){			
+			__NOP();
+		}
 }
 
 
 void moc_L1_ON(void)
 {
-    MINI_OEI_DOWN();
-    MINI_AI_UP();
-    MINI_BI_DOWN();
-    MINI_OEI_UP();
+		uint8_t t_testcycleA = 0;
+
+    	MINI_CLK_DOWN();
+		MINI_SDI0_DOWN();
+		MINI_OEI_DOWN();
+		for(t_testcycleA = 0; t_testcycleA <=NOPCNT ;t_testcycleA++){			
+			__NOP();
+		}
+		MINI_LE_UP();
+		for(t_testcycleA = 0; t_testcycleA <=NOPCNT;t_testcycleA++){			
+			__NOP();
+		}
+		MINI_AI_UP();
+    	MINI_BI_DOWN();
+		for(t_testcycleA = 0; t_testcycleA <=NOPCNT;t_testcycleA++){			
+			__NOP();
+		}
+		MINI_LE_DOWN();
+    	MINI_OEI_UP();
+		for(t_testcycleA = 0; t_testcycleA <=NOPCNT;t_testcycleA++){			
+			__NOP();
+		}
 }
 
 
 void moc_L2_ON(void)
 {
-    MINI_OEI_DOWN();
-    MINI_AI_DOWN();
-    MINI_BI_UP();
-    MINI_OEI_UP();
-}
+		uint8_t t_testcycleA = 0;
 
-
-void moc_L3_ON(void)
-{
-    MINI_OEI_DOWN();
-    MINI_AI_UP();
-    MINI_BI_UP();
-    MINI_OEI_UP();
-}
-
-
-
-void StartDefaultTask(void * argument)
-{
-    /* USER CODE BEGIN 5 */
-    /* Infinite loop */
-    //MINI_LCDI_UP();
-#define NOPCNT 30
-    uint8_t         i, j;
-	uint8_t t_testcycleA = 0;
-	//uint16_t t_testcycle = 0;
-	j = 255;
-    for (; ; )
-    {
-#if 0
-		LL_GPIO_TogglePin(MINI_C1_POART,MINI_C1_PIN);
-		LL_GPIO_TogglePin(MINI_SDI0_POART,MINI_SDI0_PIN);
-		LL_GPIO_TogglePin(MINI_LE_PORTA,MINI_LE_PIN);
-#endif
-#if 1
-		
     	MINI_CLK_DOWN();
 		MINI_SDI0_DOWN();
 		MINI_OEI_DOWN();
@@ -456,58 +422,6 @@ void StartDefaultTask(void * argument)
 			__NOP();
 		}
 		MINI_AI_DOWN();
-    	MINI_BI_DOWN();
-		for(t_testcycleA = 0; t_testcycleA <=NOPCNT;t_testcycleA++){			
-			__NOP();
-		}
-		MINI_LE_DOWN();
-    	MINI_OEI_UP();
-		for(t_testcycleA = 0; t_testcycleA <=NOPCNT;t_testcycleA++){			
-			__NOP();
-		}
-		for (i = 0; i < 16; i++)
-		{
-			if(i == 14){LED_SendByte2(j);}else{LED_SendByte2(0x00);}
-		}
-		osDelay(1);
-
-		MINI_CLK_DOWN();
-		MINI_SDI0_DOWN();
-		MINI_OEI_DOWN();
-		for(t_testcycleA = 0; t_testcycleA <=NOPCNT ;t_testcycleA++){			
-			__NOP();
-		}
-		MINI_LE_UP();
-		for(t_testcycleA = 0; t_testcycleA <=NOPCNT;t_testcycleA++){			
-			__NOP();
-		}
-		MINI_AI_UP();
-    	MINI_BI_DOWN();
-		for(t_testcycleA = 0; t_testcycleA <=NOPCNT;t_testcycleA++){			
-			__NOP();
-		}
-		MINI_LE_DOWN();
-    	MINI_OEI_UP();
-		for(t_testcycleA = 0; t_testcycleA <=NOPCNT;t_testcycleA++){			
-			__NOP();
-		}
-		for (i = 0; i < 16; i++)
-		{
-			if(i == 10){LED_SendByte2(j);}else{LED_SendByte2(0xff);}
-		}
-		osDelay(1);
-
-		MINI_CLK_DOWN();
-		MINI_SDI0_DOWN();
-		MINI_OEI_DOWN();
-		for(t_testcycleA = 0; t_testcycleA <=NOPCNT ;t_testcycleA++){			
-			__NOP();
-		}
-		MINI_LE_UP();
-		for(t_testcycleA = 0; t_testcycleA <=NOPCNT;t_testcycleA++){			
-			__NOP();
-		}
-		MINI_AI_DOWN();
     	MINI_BI_UP();
 		for(t_testcycleA = 0; t_testcycleA <=NOPCNT;t_testcycleA++){			
 			__NOP();
@@ -517,13 +431,14 @@ void StartDefaultTask(void * argument)
 		for(t_testcycleA = 0; t_testcycleA <=NOPCNT;t_testcycleA++){			
 			__NOP();
 		}
-		for (i = 0; i < 16; i++)
-		{
-			if(i == 6){LED_SendByte2(j);}else{LED_SendByte2(0xff);}
-		}
-		osDelay(1);
+}
 
-		MINI_CLK_DOWN();
+
+void moc_L3_ON(void)
+{
+		uint8_t t_testcycleA = 0;
+
+    	MINI_CLK_DOWN();
 		MINI_SDI0_DOWN();
 		MINI_OEI_DOWN();
 		for(t_testcycleA = 0; t_testcycleA <=NOPCNT ;t_testcycleA++){			
@@ -543,11 +458,165 @@ void StartDefaultTask(void * argument)
 		for(t_testcycleA = 0; t_testcycleA <=NOPCNT;t_testcycleA++){			
 			__NOP();
 		}
+}
+
+
+
+void StartDefaultTask(void * argument)
+{
+    /* USER CODE BEGIN 5 */
+    /* Infinite loop */
+    //MINI_LCDI_UP();
+
+    uint8_t         i, j;
+	
+	//uint16_t t_testcycle = 0;
+	j = 255;
+    for (; ; )
+    {
+#if 0
+		LL_GPIO_TogglePin(MINI_C1_POART,MINI_C1_PIN);
+		LL_GPIO_TogglePin(MINI_SDI0_POART,MINI_SDI0_PIN);
+		LL_GPIO_TogglePin(MINI_LE_PORTA,MINI_LE_PIN);
+#endif
+#if 1
+		moc_L0_ON();    	
+<<<<<<< HEAD
 		for (i = 0; i < 16; i++)
 		{
-			if(i == 2){LED_SendByte2(j);}else{LED_SendByte2(0xff);}
+			LED_SendByte(L0_THREE[i]);
+			//if(i == 0){LED_SendByte(L0L3_EIGHT[i]);}else{LED_SendByte(0xff);}
+=======
+		for (i = 0; i < 16; i++)
+		{
+			LED_SendByte(L0_EIGHT[i]);
+			//if(i == 0){LED_SendByte(L0L3_EIGHT[i]);}else{LED_SendByte(0xff);}
 		}
 		osDelay(1);
+
+		moc_L1_ON();
+		for (i = 0; i < 16; i++)
+		{
+			LED_SendByte(L1_EIGHT[i]);
+			//if(i == 1){LED_SendByte(j);}else{LED_SendByte(0xff);}
+		}
+		osDelay(1);
+
+		moc_L2_ON();
+		for (i = 0; i < 16; i++)
+		{
+			LED_SendByte(L2_EIGHT[i]);
+			//if(i == 2){LED_SendByte(j);}else{LED_SendByte(0xff);}
+		}
+		osDelay(1);
+
+		moc_L3_ON();
+		for (i = 0; i < 16; i++)
+		{
+			LED_SendByte(L3_EIGHT[i]);
+			//if(i == 3){LED_SendByte(j);}else{LED_SendByte(0xff);}
+>>>>>>> 0ed461ca0181890208403f807e5ec57464016cf3
+		}
+		osDelay(1);
+
+		moc_L1_ON();
+		for (i = 0; i < 16; i++)
+		{
+			LED_SendByte(L1_THREE[i]);
+			//if(i == 1){LED_SendByte(j);}else{LED_SendByte(0xff);}
+		}
+		osDelay(1);
+
+		moc_L2_ON();
+		for (i = 0; i < 16; i++)
+		{
+			LED_SendByte(L2_THREE[i]);
+			//if(i == 2){LED_SendByte(j);}else{LED_SendByte(0xff);}
+		}
+		osDelay(1);
+
+		moc_L3_ON();
+		for (i = 0; i < 16; i++)
+		{
+			LED_SendByte(L3_THREE[i]);
+			//if(i == 3){LED_SendByte(j);}else{LED_SendByte(0xff);}
+		}
+		osDelay(1);
+
+
+
+
+
+//
+//		moc_L0_ON();    	
+//		for (i = 0; i < 16; i++)
+//		{
+//			LED_SendByte(L0_TWO[i]);
+//			//if(i == 0){LED_SendByte(L0L3_EIGHT[i]);}else{LED_SendByte(0xff);}
+//		}
+//		osDelay(1);
+//
+//		moc_L1_ON();
+//		for (i = 0; i < 16; i++)
+//		{
+//			LED_SendByte(L1_TWO[i]);
+//			//if(i == 1){LED_SendByte(j);}else{LED_SendByte(0xff);}
+//		}
+//		osDelay(1);
+//
+//		moc_L2_ON();
+//		for (i = 0; i < 16; i++)
+//		{
+//			LED_SendByte(L2_TWO[i]);
+//			//if(i == 2){LED_SendByte(j);}else{LED_SendByte(0xff);}
+//		}
+//		osDelay(1);
+//
+//		moc_L3_ON();
+//		for (i = 0; i < 16; i++)
+//		{
+//			LED_SendByte(L3_TWO[i]);
+//			//if(i == 3){LED_SendByte(j);}else{LED_SendByte(0xff);}
+//		}
+//		osDelay(100);
+//
+//
+//
+//
+//
+//
+//
+//		moc_L0_ON();    	
+//		for (i = 0; i < 16; i++)
+//		{
+//			LED_SendByte(L0_ONE[i]);
+//			//if(i == 0){LED_SendByte(L0L3_EIGHT[i]);}else{LED_SendByte(0xff);}
+//		}
+//		osDelay(1);
+//
+//		moc_L1_ON();
+//		for (i = 0; i < 16; i++)
+//		{
+//			LED_SendByte(L1_ONE[i]);
+//			//if(i == 1){LED_SendByte(j);}else{LED_SendByte(0xff);}
+//		}
+//		osDelay(1);
+//
+//		moc_L2_ON();
+//		for (i = 0; i < 16; i++)
+//		{
+//			LED_SendByte(L2_ONE[i]);
+//			//if(i == 2){LED_SendByte(j);}else{LED_SendByte(0xff);}
+//		}
+//		osDelay(1);
+//
+//		moc_L3_ON();
+//		for (i = 0; i < 16; i++)
+//		{
+//			LED_SendByte(L3_ONE[i]);
+//			//if(i == 3){LED_SendByte(j);}else{LED_SendByte(0xff);}
+//		}
+//		osDelay(100);
 
 
 //		MINI_CLK_DOWN();
@@ -601,7 +670,7 @@ void StartDefaultTask(void * argument)
 //		__NOP();
 //		for (i = 0; i < 16; i++)
 //		{
-//			LED_SendByte2(j);
+//			LED_SendByte(j);
 //		}
 		//osDelay(5);
 		j--;

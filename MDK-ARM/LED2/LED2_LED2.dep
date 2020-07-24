@@ -1,7 +1,11 @@
 Dependencies for Project 'LED2', Target 'LED2': (DO NOT MODIFY !)
 CompilerVersion: 5060750::V5.06 update 6 (build 750)::.\ARMCC
 F (startup_stm32f103xe.s)(0x5F190E94)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1" -I ..\Inc-I.\RTE\_LED2-IC:\Users\LAPTOP-LZYHP\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\LAPTOP-LZYHP\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include--pd "__UVISION_VERSION SETA 530" --pd "_RTE_ SETA 1" --pd "STM32F10X_HD SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32f103xe.lst --xref -o led2\startup_stm32f103xe.o --depend led2\startup_stm32f103xe.d)
-F (../Src/main.c)(0x5F1A97E1)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\user\bsp-I.\RTE\_LED2-IC:\Users\LAPTOP-LZYHP\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\LAPTOP-LZYHP\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_HD -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DHSI_VALUE="8000000" -DLSI_VALUE="40000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DSTM32F103xE-o led2\main.o --omf_browse led2\main.crf --depend led2\main.d)
+<<<<<<< HEAD
+F (../Src/main.c)(0x5F1ACEF7)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\user\bsp-I.\RTE\_LED2-IC:\Users\LAPTOP-LZYHP\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\LAPTOP-LZYHP\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_HD -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DHSI_VALUE="8000000" -DLSI_VALUE="40000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DSTM32F103xE-o led2\main.o --omf_browse led2\main.crf --depend led2\main.d)
+=======
+F (../Src/main.c)(0x5F1AB69C)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\user\bsp-I.\RTE\_LED2-IC:\Users\LAPTOP-LZYHP\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\LAPTOP-LZYHP\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_HD -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DHSI_VALUE="8000000" -DLSI_VALUE="40000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DSTM32F103xE-o led2\main.o --omf_browse led2\main.crf --depend led2\main.d)
+>>>>>>> 0ed461ca0181890208403f807e5ec57464016cf3
 I (../Inc/main.h)(0x5F190E94)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_rcc.h)(0x5F190E94)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5F190E94)
@@ -30,7 +34,11 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5F190E94)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5F190E94)
 I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h)(0x5F190E94)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x5F190E94)
-I (..\user\bsp\bsp_led_hardware.h)(0x5F1A65A7)
+<<<<<<< HEAD
+I (..\user\bsp\bsp_led_hardware.h)(0x5F1ACBFB)
+=======
+I (..\user\bsp\bsp_led_hardware.h)(0x5F1AB534)
+>>>>>>> 0ed461ca0181890208403f807e5ec57464016cf3
 I (../Inc/includes.h)(0x5F190E94)
 I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
@@ -102,7 +110,11 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x5F190E94
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x5F190E94)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x5F190E94)
 F (..\user\bsp\bsp_led_hardware.c)(0x5F19536A)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\user\bsp-I.\RTE\_LED2-IC:\Users\LAPTOP-LZYHP\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\LAPTOP-LZYHP\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_HD -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DHSI_VALUE="8000000" -DLSI_VALUE="40000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DSTM32F103xE-o led2\bsp_led_hardware.o --omf_browse led2\bsp_led_hardware.crf --depend led2\bsp_led_hardware.d)
-I (..\user\bsp\bsp_led_hardware.h)(0x5F1A65A7)
+<<<<<<< HEAD
+I (..\user\bsp\bsp_led_hardware.h)(0x5F1ACBFB)
+=======
+I (..\user\bsp\bsp_led_hardware.h)(0x5F1AB534)
+>>>>>>> 0ed461ca0181890208403f807e5ec57464016cf3
 I (../Inc/includes.h)(0x5F190E94)
 I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
@@ -180,7 +192,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_pwr.h)(0x5F190E94)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_dma.h)(0x5F190E94)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_gpio.h)(0x5F190E94)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usart.h)(0x5F190E94)
-I (..\user\bsp\bsp_led_hardware.h)(0x5F1A65A7)
+<<<<<<< HEAD
+I (..\user\bsp\bsp_led_hardware.h)(0x5F1ACBFB)
+=======
+I (..\user\bsp\bsp_led_hardware.h)(0x5F1AB534)
+>>>>>>> 0ed461ca0181890208403f807e5ec57464016cf3
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_gpio.c)(0x5F190E94)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\user\bsp-I.\RTE\_LED2-IC:\Users\LAPTOP-LZYHP\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\LAPTOP-LZYHP\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F10X_HD -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DHSI_VALUE="8000000" -DLSI_VALUE="40000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DSTM32F103xE-o led2\stm32f1xx_ll_gpio.o --omf_browse led2\stm32f1xx_ll_gpio.crf --depend led2\stm32f1xx_ll_gpio.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_gpio.h)(0x5F190E94)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5F190E94)
