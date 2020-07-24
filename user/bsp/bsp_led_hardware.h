@@ -71,10 +71,10 @@
 #define MINI_AI_UP()    LL_GPIO_SetOutputPin(GPIOB,LL_GPIO_PIN_0)
 #define MINI_AI_DOWN()  LL_GPIO_ResetOutputPin(GPIOB,LL_GPIO_PIN_0)
 
-#define MINI_SDI0_POART 	GPIOB
-#define MINI_SDI0_PIN   	LL_GPIO_PIN_1
-#define MINI_SDI0_UP()    LL_GPIO_SetOutputPin(GPIOB,LL_GPIO_PIN_1)
-#define MINI_SDI0_DOWN()  LL_GPIO_ResetOutputPin(GPIOB,LL_GPIO_PIN_1)
+#define MINI_B1_POART 	GPIOB
+#define MINI_B1_PIN   	LL_GPIO_PIN_1
+#define MINI_B1_UP()    LL_GPIO_SetOutputPin(GPIOB,LL_GPIO_PIN_1)
+#define MINI_B1_DOWN()  LL_GPIO_ResetOutputPin(GPIOB,LL_GPIO_PIN_1)
 
 #define MINI_B9_POART 	GPIOB
 #define MINI_B9_PIN   	LL_GPIO_PIN_9
@@ -93,23 +93,23 @@
 
 #define MINI_C1_POART 	GPIOC
 #define MINI_C1_PIN   	LL_GPIO_PIN_1
-#define MINI_C1_UP()    LL_GPIO_SetOutputPin(GPIOC,LL_GPIO_PIN_1)
-#define MINI_C1_DOWN()  LL_GPIO_ResetOutputPin(GPIOC,LL_GPIO_PIN_1)
+#define MINI_CLK_UP()    LL_GPIO_SetOutputPin(GPIOC,LL_GPIO_PIN_1)
+#define MINI_CLK_DOWN()  LL_GPIO_ResetOutputPin(GPIOC,LL_GPIO_PIN_1)
 
 #define MINI_BI_POART 	GPIOC
 #define MINI_BI_PIN   	LL_GPIO_PIN_2
 #define MINI_BI_UP()    LL_GPIO_SetOutputPin(GPIOC,LL_GPIO_PIN_2)
 #define MINI_BI_DOWN()  LL_GPIO_ResetOutputPin(GPIOC,LL_GPIO_PIN_2)
 
-#define MINI_C3_POART 	GPIOC
-#define MINI_C3_PIN   	LL_GPIO_PIN_3
-#define MINI_C3_UP()    LL_GPIO_SetOutputPin(GPIOC,LL_GPIO_PIN_3)
-#define MINI_C3_DOWN()  LL_GPIO_ResetOutputPin(GPIOC,LL_GPIO_PIN_3)
+#define MINI_SDI0_POART 	GPIOC
+#define MINI_SDI0_PIN   	LL_GPIO_PIN_3
+#define MINI_SDI0_UP()    LL_GPIO_SetOutputPin(GPIOC,LL_GPIO_PIN_3)
+#define MINI_SDI0_DOWN()  LL_GPIO_ResetOutputPin(GPIOC,LL_GPIO_PIN_3)
 
-#define MINI_CLK_POART 	GPIOC
-#define MINI_CLK_PIN   	LL_GPIO_PIN_4
-#define MINI_CLK_UP()   LL_GPIO_SetOutputPin(GPIOC,LL_GPIO_PIN_4)
-#define MINI_CLK_DOWN() LL_GPIO_ResetOutputPin(GPIOC,LL_GPIO_PIN_4)
+#define MINI_C4_POART 	GPIOC
+#define MINI_C4_PIN   	LL_GPIO_PIN_4
+#define MINI_C4_UP()   LL_GPIO_SetOutputPin(GPIOC,LL_GPIO_PIN_4)
+#define MINI_C4_DOWN() LL_GPIO_ResetOutputPin(GPIOC,LL_GPIO_PIN_4)
 
 #define MINI_OE_POART 	GPIOC
 #define MINI_OE_PIN   	LL_GPIO_PIN_5
@@ -133,7 +133,7 @@
 
 static const unsigned char ONE[16]=
 {
-0x00,0xff,0x00,0xff,0x00,0xff,0x00,0x00,0x00,0xff,0x00,0x00,0x00,0xff,0x00,0x00
+0x00,0x11,0x22,0x33,0x44,0x55,0x66,0x77,0x88,0x99,0xaa,0xbb,0xcc,0xdd,0xee,0xff
 };
 
 static const unsigned char TWO[16]=

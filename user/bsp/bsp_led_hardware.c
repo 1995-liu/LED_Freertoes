@@ -59,11 +59,11 @@ void LED_GPIO_Init(void)
   GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
   LL_GPIO_Init(MINI_AI_POART, &GPIO_InitStruct);
 
-  GPIO_InitStruct.Pin = MINI_SDI0_PIN;
+  GPIO_InitStruct.Pin = MINI_B1_PIN;
   GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
   GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_HIGH;
   GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
-  LL_GPIO_Init(MINI_SDI0_POART, &GPIO_InitStruct);
+  LL_GPIO_Init(MINI_B1_POART, &GPIO_InitStruct);
 
   GPIO_InitStruct.Pin = MINI_B9_PIN;
   GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
@@ -95,17 +95,17 @@ void LED_GPIO_Init(void)
   GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
   LL_GPIO_Init(MINI_BI_POART, &GPIO_InitStruct);
 
-  GPIO_InitStruct.Pin = MINI_C3_PIN;
+  GPIO_InitStruct.Pin = MINI_SDI0_PIN;
   GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
   GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
   GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
-  LL_GPIO_Init(MINI_C3_POART, &GPIO_InitStruct);
+  LL_GPIO_Init(MINI_SDI0_POART, &GPIO_InitStruct);
 
-  GPIO_InitStruct.Pin = MINI_CLK_PIN;
+  GPIO_InitStruct.Pin = MINI_C4_PIN;
   GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
   GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_HIGH;
   GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
-  LL_GPIO_Init(MINI_CLK_POART, &GPIO_InitStruct);
+  LL_GPIO_Init(MINI_C4_POART, &GPIO_InitStruct);
 
   GPIO_InitStruct.Pin = MINI_C7_PIN;
   GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
