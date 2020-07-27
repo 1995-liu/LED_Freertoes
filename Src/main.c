@@ -481,41 +481,10 @@ void StartDefaultTask(void * argument)
 #endif
 #if 1
 		moc_L0_ON();    	
-<<<<<<< HEAD
 		for (i = 0; i < 16; i++)
 		{
 			LED_SendByte(L0_THREE[i]);
 			//if(i == 0){LED_SendByte(L0L3_EIGHT[i]);}else{LED_SendByte(0xff);}
-=======
-		for (i = 0; i < 16; i++)
-		{
-			LED_SendByte(L0_EIGHT[i]);
-			//if(i == 0){LED_SendByte(L0L3_EIGHT[i]);}else{LED_SendByte(0xff);}
-		}
-		osDelay(1);
-
-		moc_L1_ON();
-		for (i = 0; i < 16; i++)
-		{
-			LED_SendByte(L1_EIGHT[i]);
-			//if(i == 1){LED_SendByte(j);}else{LED_SendByte(0xff);}
-		}
-		osDelay(1);
-
-		moc_L2_ON();
-		for (i = 0; i < 16; i++)
-		{
-			LED_SendByte(L2_EIGHT[i]);
-			//if(i == 2){LED_SendByte(j);}else{LED_SendByte(0xff);}
-		}
-		osDelay(1);
-
-		moc_L3_ON();
-		for (i = 0; i < 16; i++)
-		{
-			LED_SendByte(L3_EIGHT[i]);
-			//if(i == 3){LED_SendByte(j);}else{LED_SendByte(0xff);}
->>>>>>> 0ed461ca0181890208403f807e5ec57464016cf3
 		}
 		osDelay(1);
 
@@ -543,11 +512,6 @@ void StartDefaultTask(void * argument)
 		}
 		osDelay(1);
 
-
-
-
-
-//
 //		moc_L0_ON();    	
 //		for (i = 0; i < 16; i++)
 //		{
