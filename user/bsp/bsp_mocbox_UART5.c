@@ -6,6 +6,7 @@
 * eric 20200428
 ***********************************************/
 /* UART5 init function */
+#if 0
 void MX_UART5_Init(uint32_t baudrate)
     {
     /**USART5 GPIO Configuration
@@ -421,4 +422,4 @@ int main(void)
  * -3:   -3 right justif.
  */
 #endif
-
+#endif

@@ -78,7 +78,7 @@
 //#include "stm32f10x.h"          // Modified by fire (Ô­ÊÇ #include  <stm32f10x_lib.h>)
 #include "main.h"
 //#include "stm32f1xx_hal.h"
-#include "stm32f1xx_ll_usart.h"
+//#include "stm32f1xx_ll_usart.h"
 //#include "stm32f1xx_hal_def.h"
 
 /*
@@ -95,7 +95,7 @@
 //#include "bsp_mocbox_UART2.h"
 //#include "bsp_mocbox_UART3.h"
 //#include "bsp_mocbox_UART4.h"
-#include "bsp_mocbox_UART5.h"
+//#include "bsp_mocbox_UART5.h"
 //#include "bsp_mocbox_5360.h"
 //#include "bsp_mocbox_bluetooth.h"
 //#include "bsp_mocbox_mpu6050.h"
